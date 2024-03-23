@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ospTutorial.dir/src/ospTutorial.cpp.o -o ../bin/ospTutorial   -L/opt/intel/oneapi/ospray/2.12.0/lib  -L/opt/intel/oneapi/rkcommon/latest/lib  -Wl,-rpath,/opt/intel/oneapi/ospray/2.12.0/lib:/opt/intel/oneapi/rkcommon/latest/lib: -lospray -lrkcommon 
