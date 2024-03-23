@@ -1,0 +1,22 @@
+{
+  "guid": "2E2ECC82-2D02-4905-BE5E-0ADB1D04725B",
+  "name": "VKL Intro Jupyter",
+  "categories": ["Toolkit/oneAPI Libraries/Open VKL"],
+  "description": "This jupyter notebook for Open VKL Intro",
+  "builder": ["cli"],
+  "languages": [{"cpp":{}}],
+  "dependencies": ["tbb","ospray","openvkl","embree","rkcommon","oidn"],
+  "os":["linux"],
+  "targetDevice": ["CPU"],
+  "ciTests": {
+        "linux": [
+                {
+                "id": "OpenVKL_intro_jupyter",
+                "steps": [
+                    "./build.sh",
+                    "./run.sh"
+                 ]
+                 }
+        ]
+  }
+}

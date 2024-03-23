@@ -1,0 +1,22 @@
+{
+  "guid": "BFF051A8-E379-4AE7-A218-2B6DC4FD816D",
+  "name": "Embree Intro Jupyter",
+  "categories": ["Toolkit/oneAPI Libraries/Embree"],
+  "description": "This jupyter notebook for Embree Intro",
+  "builder": ["cli"],
+  "languages": [{"cpp":{}}],
+  "dependencies": ["tbb","ospray","openvkl","embree","rkcommon","oidn"],
+  "os":["linux"],
+  "targetDevice": ["CPU"],
+  "ciTests": {
+        "linux": [
+                {
+                "id": "Embree_intro_jupyter",
+                "steps": [
+                    "./build.sh",
+                    "./run.sh"
+                 ]
+                 }
+        ]
+  }
+}

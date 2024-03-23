@@ -1,0 +1,79 @@
+Cloning into '/tmp/tmp.xb981MXVPp/xpu_verify'...
+ 
+:: initializing oneAPI environment ...
+   check_sycl.sh: BASH_VERSION = 5.1.16(1)-release
+   args: Using "$@" for setvars.sh arguments: --force
+:: advisor -- latest
+:: ccl -- latest
+:: clck -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+icpx is in the environment
+sleeping for 5 seconds...
+./device_info
+Device name: Intel(R) Data Center GPU Max 1100
+Device memory: 45.5852 GB
+Device max compute units: 448
+Device max work-group size: 1024
+./add_nums
+sum 30 random numbers using device: Intel(R) Data Center GPU Max 1100
+8 + 16 = 24
+1 + 12 = 13
+17 + 14 = 31
+12 + 14 = 26
+16 + 11 = 27
+19 + 11 = 30
+10 + 16 = 26
+12 + 6 = 18
+11 + 18 = 29
+10 + 4 = 14
+0 + 12 = 12
+5 + 6 = 11
+17 + 3 = 20
+12 + 16 = 28
+18 + 5 = 23
+1 + 18 = 19
+1 + 14 = 15
+10 + 18 = 28
+1 + 15 = 16
+4 + 17 = 21
+18 + 3 = 21
+9 + 0 = 9
+0 + 13 = 13
+19 + 3 = 22
+11 + 1 = 12
+19 + 4 = 23
+14 + 16 = 30
+10 + 3 = 13
+19 + 2 = 21
+0 + 9 = 9
+./enum_devices
+Platform: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+	Device: Intel(R) FPGA Emulation Device
+Platform: Intel(R) OpenCL
+	Device: Intel(R) Xeon(R) Platinum 8480L
+Platform: Intel(R) OpenCL HD Graphics
+	Device: Intel(R) Data Center GPU Max 1100
+	Device: Intel(R) Data Center GPU Max 1100
+	Device: Intel(R) Data Center GPU Max 1100
+Platform: Intel(R) Level-Zero
+	Device: Intel(R) Data Center GPU Max 1100
+	Device: Intel(R) Data Center GPU Max 1100
+	Device: Intel(R) Data Center GPU Max 1100
+compile and execute sycl programs on the device
+To run PyTorch test, docker is required, not found...

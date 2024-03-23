@@ -1,0 +1,27 @@
+## Copyright 2021 Intel Corporation
+## SPDX-License-Identifier: Apache-2.0
+
+cmake_minimum_required(VERSION 3.1)
+
+project(vkl_vdb_tutorial VERSION 0.1 LANGUAGES C CXX)
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(CMAKE_DISABLE_SOURCE_CHANGES ON)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
+
+find_package(openvkl REQUIRED)
+
+add_executable(${PROJECT_NAME} vdb.cpp)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE openvkl::openvkl)

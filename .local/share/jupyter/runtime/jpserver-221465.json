@@ -1,0 +1,13 @@
+{
+  "base_url": "/user/u8f81d529891be61cdaeb0cfec602b12/",
+  "hostname": "0.0.0.0",
+  "password": false,
+  "pid": 221465,
+  "port": 54165,
+  "root_dir": "/home/u8f81d529891be61cdaeb0cfec602b12",
+  "secure": false,
+  "sock": "",
+  "token": "479d95b36d6d45e7b9aad15a8a3f820f",
+  "url": "http://idc-beta-batch-pvc-node-05:54165/user/u8f81d529891be61cdaeb0cfec602b12/",
+  "version": "2.7.3"
+}

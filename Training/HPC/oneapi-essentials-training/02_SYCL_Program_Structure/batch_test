@@ -1,0 +1,5 @@
+#!/bin/bash
+#SBATCH --output=slurm_job_output.log   
+#SBATCH --error=slurm_job_errors.log   # Logs if job crashes
+source /opt/intel/oneapi/setvars.sh
+./a.out

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/volumeRender.dir/src/volumeRender.cpp.o -o ../bin/volumeRender   -L/opt/intel/oneapi/ospray/2.12.0/lib  -L/opt/intel/oneapi/rkcommon/latest/lib  -Wl,-rpath,/opt/intel/oneapi/ospray/2.12.0/lib:/opt/intel/oneapi/rkcommon/latest/lib: -lospray -lrkcommon 

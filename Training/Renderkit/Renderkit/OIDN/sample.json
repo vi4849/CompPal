@@ -1,0 +1,26 @@
+{
+  "guid": "2ED14831-0F49-4AB0-A58F-9CCAB1023B42",
+  "name": "Intel Open Image Denoise Jupyter Notebook",
+  "categories": ["Toolkit/oneAPI Libraries/Open Image Denoise"],
+  "description": "This jupyter notebook for OIDN",
+  "builder": ["cli"],
+  "languages": [{"cpp":{}}],
+  "dependencies": ["tbb","rkcommon"],
+  "os":["linux"],
+  "targetDevice": ["CPU"],
+  "ciTests": {
+        "linux": [
+                {
+                "id": "oidnDenoise_jupyter",
+                "steps": [
+                    "mkdir build",
+                    "cd build",
+                    "cmake ..",
+                    "cmake --build . ",
+		            "cp ../images/JunkShop_00064spp.hdr.pfm .",
+                    "./oidnDenoise -hdr JunkShop_00064spp.hdr.pfm -o denoised.pfm"
+                 ]
+                 }
+        ]
+  }
+}

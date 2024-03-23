@@ -1,0 +1,22 @@
+{
+  "guid": "4F3DDEB9-4414-4D4D-87B9-981951F2298A",
+  "name": "VDB and Open VKL Jupyter",
+  "categories": ["Toolkit/oneAPI Libraries/Open VKL"],
+  "description": "This jupyter notebook for VDB with Open VKL",
+  "builder": ["cli"],
+  "languages": [{"cpp":{}}],
+  "dependencies": ["tbb","ospray","openvkl","embree","rkcommon","oidn"],
+  "os":["linux"],
+  "targetDevice": ["CPU"],
+  "ciTests": {
+        "linux": [
+                {
+                "id": "OpenVKL_VDB_jupyter",
+                "steps": [
+                    "./build.sh",
+                    "./run.sh"
+                 ]
+                 }
+        ]
+  }
+}
