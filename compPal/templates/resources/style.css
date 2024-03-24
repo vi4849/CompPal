@@ -1,0 +1,197 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    padding-top: 500px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+
+main {
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+header {
+    background-color: #119952;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 40px;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+.welcome h1{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  
+.welcome{
+    text-align: center; 
+    font-size: larger;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin-top: 200%;
+    margin-bottom: 50%;
+    color: #e0e0e0;
+    width: 100%;
+}
+
+
+.survey-intro {
+    padding-top: 20 px;
+    width: 100%;
+    color: #e0e0e0;
+    align-self: center;
+    text-align: center;
+}
+
+
+.survey-intro h2 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.survey-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.question {
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.question select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #333333;
+    border: 1px solid #444;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+.question select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+
+.question select:hover {
+    background-color: #008080;
+}
+
+
+.question option {
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.question option:hover {
+    background-color: #008080;
+}
+
+button {
+    background-color: #0b6536;
+    color: #ffffff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 50%;
+    padding-bottom: 20 px;
+}
+
+button:hover {
+    background-color: #119952;
+}
+
+@media (max-width: 768 px) {
+    .container {
+        width: 85%;
+    }
+}
