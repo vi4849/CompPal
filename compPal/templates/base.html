@@ -22,34 +22,32 @@
     <section class="survey-intro">
       <h2>Useful Information: </h2>
       <p>1. Deciding how much memory (or RAM) you need in a laptop depends on how you normally use your laptop </p>
-      <p>   Consider: What do you use your laptop for? </p>
-      <p>       *If you use your laptop for only basic tasks (like web browsing or answering emails) you'd likely only need 8 GB. </p>
-      <p>       *If you use your laptop for casual gaming or streaming you would probably prefer 16 GB. </p>
-      <p>       *If you use your laptop for larger game files or to edit photos and videos, 32 GB is needed. </p>
-      <p>       *If you use your laptop to deal with large datasets, virutal machines, etc. you would most likely need 64 GB. </p>
-
+      <p>       ➔If you use your laptop for only basic tasks (like web browsing or answering emails) you'd likely only need 8 GB. </p>
+      <p>       ➔If you use your laptop for casual gaming or streaming you would probably prefer 16 GB. </p>
+      <p>       ➔If you use your laptop for larger game files or to edit photos and videos, 32 GB is needed. </p>
+      <p>       ➔If you use your laptop to deal with large datasets, virutal machines, etc. you would most likely need 64 GB. </p>
+      <br>
       <p>2. Differences in processors</p>
-      <p>   Consider: What is more important to you? </p>
-      <p>       *If gaming capabilites, cost, and multitasking are important to you consider an AMD processor. </p>
-      <p>       *Is power efficency and compatability is important to you, consider an Intel Processor  </p>
-      <p>       *If integration with macOS and the apple ecosystem is important to you consider M-Series processors </p>
+      <p>       ➔If gaming capabilites, cost, and multitasking are important to you, consider an AMD processor. </p>
+      <p>       ➔Is power efficency and compatability are important to you, consider an Intel Processor  </p>
+      <p>       ➔If integration with macOS and the Apple ecosystem is important to you, consider M-Series processors </p>
     </section>
     <form id="survey-form" action="{% url 'submit_survey' %}" method = "post">
       {% csrf_token %}
       <!-- Question 1 with dropdown -->
       <div class="question">
-        <label for="memorySize">Question 1: What memory size is suitable for your needs?</label>
+        <label for="memorySize">Question 1: Select your preferred memory capacity.</label>
         <select id="memorySize" name="memorySize">
-          <option value="8GB">8GB</option>
-          <option value="16GB">16GB</option>
-          <option value="32GB">32GB</option>
-          <option value="64GB">64GB</option>
+          <option value="8GB">8 GB</option>
+          <option value="16GB">16 GB</option>
+          <option value="32GB">32 GB</option>
+          <option value="64GB">64 GB</option>
         </select>
       </div>
 
       <!-- Question 2 with dropdown -->
       <div class="question">
-        <label for="processor">Question 2: What processor do you need?</label>
+        <label for="processor">Question 2: Selected your preferred processor type.</label>
         <select id="processor" name="processor">
           <option value="Intel">Intel</option>
           <option value="AMD">AMD</option>
@@ -59,7 +57,7 @@
 
       <!-- Question 3 with dropdown -->
       <div class="question">
-        <label for="brand">Question 3: Do you have a brand preference?</label>
+        <label for="brand">Question 3: Select your brand preference.</label>
         <select id="brand" name="brand">
           <option value="APPLE">APPLE</option>
           <option value="DELL">DELL</option>
@@ -73,25 +71,25 @@
       </div>
 
       <div class="question">
-        <label for="screen">Question 4: Do you want a particular screen size?</label>
+        <label for="screen">Question 4: Of these options, which is closest to your ideal screen size?</label>
         <select id="screen" name="screen">
           <option value="11.6">11.6</option>
           <option value="12.5">12.5</option>
           <option value="13.3">13.3</option>
-          <option value="14">14</option>
+          <option value="14">14.0</option>
           <option value="15.6">15.6</option>
           <option value="17.3">17.3</option>
         </select>
       </div>
 
       <div class="question">
-        <label for="price">Question 5: Which of these numbers is closest to your price range?</label>
+        <label for="price">Question 5: Of these options, which is closest to your ideal price range?</label>
         <select id="price" name="price">
-          <option value="300">300</option>
-          <option value="600">600</option>
-          <option value="1200">1200</option>
-          <option value="1800">1800</option>
-          <option value="2400">2400</option>
+          <option value="300">$300</option>
+          <option value="600">$600</option>
+          <option value="1200">$1200</option>
+          <option value="1800">$1800</option>
+          <option value="2400">$2400</option>
         </select>
       </div>
 
