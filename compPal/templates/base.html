@@ -106,8 +106,8 @@
       <button type="submit">Submit Answers</button>
     </form>
       <section class="survey-results">
-        <h2>Survey Results: </h2>
-        <p id="results-placeholder">Results will be displayed here once the survey is completed.</p>
+        <h2>Your Results: </h2>
+        <ol id="result">Results will be displayed here once the survey is completed.</ol>
       </section>
   </main>
 
@@ -129,8 +129,31 @@
       })
               .then(response => response.json())
               .then(data => {
-                // Handle response data from the backend
-                document.getElementById('result').textContent = data.result;
+                if (data.success) {
+                  // Split the recommendations string into an array based on the '*' delimiter
+                  var recommendationsArray = data.recommendations.split('*');
+              
+                  // Get the unordered list element by its ID
+                  var recommendationsList = document.getElementById('result');
+              
+                  // Clear any existing content in the list
+                  recommendationsList.innerHTML = '';
+              
+                  // Iterate over the array and create a list item for each recommendation
+                  recommendationsArray.forEach(function(recommendation) {
+                    // Create a new list item element
+                    var listItem = document.createElement('li');
+              
+                    // Set the text of the list item to the current recommendation
+                    listItem.textContent = recommendation;
+              
+                    // Append the list item to the unordered list
+                    recommendationsList.appendChild(listItem);
+                  });
+                } else {
+                  // Handle any errors or unsuccessful responses here
+                  console.error('An error occurred:', data.message);
+                }
               })
               .catch(error => {
                 console.error('Submission failed:', error);
