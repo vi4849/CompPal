@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompPal Survey</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <!-- Header content -->
+  </header>
+
+  <main>
+    <form id="survey-form">
+      <!-- Question 1 with dropdown -->
+      <div class="question">
+        <label for="memorySize">Question 1: What memory size is suitable for your needs?</label>
+        <select id="memorySize" name="memorySize">
+          <option value="8GB">8GB</option>
+          <option value="16GB">16GB</option>
+          <option value="32GB">32GB</option>
+          <option value="64GB">64GB</option>
+        </select>
+      </div>
+
+      <!-- Question 2 with dropdown -->
+      <div class="question">
+        <label for="processor">Question 2: What processor do you need?</label>
+        <select id="processor" name="processor">
+          <option value="Intel">Intel</option>
+          <option value="AMD">AMD</option>
+          <option value="M-series">M-series chip</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit Answers</button>
+    </form>
+    <div id="result"></div>
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('survey-form');
+    form.onsubmit = function(event) {
+      event.preventDefault();
+      var formData = new FormData(form);
+      fetch('/submit-survey/', {
+        method: 'POST',
+        body: formData
+      })
+              .then(response => response.json())
+              .then(data => {
+                // Handle response data from the backend
+                document.getElementById('result').textContent = data.result;
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+    };
+  });
+</script>
+</body>
+</html>
